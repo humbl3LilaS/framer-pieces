@@ -1,5 +1,5 @@
-import Layout from "./components/Layout.tsx";
-import Card from "./components/Card.tsx";
+import Layout from "./components/Reveal-Animation/Layout.tsx";
+import Card from "./components/Reveal-Animation/Card.tsx";
 
 
 function App() {
