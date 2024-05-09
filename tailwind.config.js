@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns : {
+        "revealCardCol" : "repeat(3, 400px)"
+      },
+      gridTemplateRows : {
+        "revealCardRow" : "repeat(2,400px)"
+      }
+    },
   },
   plugins: [],
 }
