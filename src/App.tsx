@@ -1,11 +1,20 @@
+import Layout from "./components/Layout.tsx";
+import Card from "./components/Card.tsx";
 
 
 function App() {
 
 
-  return (
-    <h1 className={"text-cyan-900"}>Hello</h1>
-  )
+    return (
+        <Layout>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+        </Layout>
+    );
 }
 
-export default App
+export default App;
