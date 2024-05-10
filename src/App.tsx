@@ -1,19 +1,11 @@
-import Layout from "./components/Reveal-Animation/Layout.tsx";
-import Card from "./components/Reveal-Animation/Card.tsx";
+import ColorChangeLayout from "./components/Color-Change-Cards/ColorChangeLayout.tsx";
 
 
 function App() {
 
 
     return (
-        <Layout>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-        </Layout>
+        <ColorChangeLayout/>
     );
 }
 
