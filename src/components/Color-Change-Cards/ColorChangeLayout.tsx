@@ -1,5 +1,6 @@
 import ColorChangeCard from "./ColorChangeCard.tsx";
 
+
 export default function ColorChangeLayout() {
     return (
         <section>
