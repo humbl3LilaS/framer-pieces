@@ -1,11 +1,10 @@
-import ColorChangeLayout from "./components/Color-Change-Cards/ColorChangeLayout.tsx";
-
+import AnimatedFAQ from "./components/Animated-FAQ/AnimatedFAQ.tsx";
 
 function App() {
 
 
     return (
-        <ColorChangeLayout/>
+        <AnimatedFAQ/>
     );
 }
 
