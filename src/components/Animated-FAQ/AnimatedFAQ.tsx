@@ -1,7 +1,53 @@
 import AnimatedFAQLayout from "./AnimatedFAQLayout.tsx";
 import AnimatedBtn from "./AnimatedBtn.tsx";
 
+import FAQAccordion from "@/components/Animated-FAQ/FAQAccordion.tsx";
 
+const FAQContent =
+    {
+        super: [
+            {
+                question: "Is it accessible?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it cool?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it lit?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            }
+        ],
+        duper: [
+            {
+                question: "Is it duper accessible?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it duper cool?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it duper  lit?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            }
+        ],
+        edelweiss: [
+            {
+                question: "Is it edelweiss accessible?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it edelweiss cool?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            },
+            {
+                question: "Is it edelweiss lit?",
+                answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut, deleniti error fuga fugit nesciunt reiciendis similique suscipit ullam! Sapiente!"
+            }
+        ]
+    };
 
 
 export default function AnimatedFAQ() {
@@ -22,6 +68,9 @@ export default function AnimatedFAQ() {
                     Edelweiss
                 </AnimatedBtn>
             </div>
+            <FAQAccordion id={"super"} content={FAQContent["super"]}></FAQAccordion>
+            <FAQAccordion id={"duper"} content={FAQContent["duper"]}></FAQAccordion>
+            <FAQAccordion id={"edelweiss"} content={FAQContent["edelweiss"]}></FAQAccordion>
         </AnimatedFAQLayout>
     );
 }
