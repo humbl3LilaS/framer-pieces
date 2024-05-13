@@ -1,12 +1,12 @@
 import {motion} from "framer-motion";
 import {ReactNode} from "react";
 import {twMerge} from "tailwind-merge";
-import {Btns, useBtnStateStore} from "../../store/btnStateStore.ts";
+import {useBtnStateStore} from "@/store/btnStateStore.ts";
 
 type AnimatedBtnProps = {
     className?: string;
     children: ReactNode;
-    id: Btns,
+    id: string,
 }
 
 const animatedBtnVariants = {

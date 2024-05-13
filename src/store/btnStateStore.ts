@@ -1,14 +1,14 @@
 import {create} from "zustand";
 import {immer} from "zustand/middleware/immer";
 
-export type Btns = "super" | "duper" | "edelweiss" | null;
+
 
 type State = {
-    active: Btns;
+    active: string | null;
 }
 
 type Action = {
-    setActive: (btn: Btns) => void;
+    setActive: (btn: string) => void;
 }
 
 type BtnStateStore = State & Action;
