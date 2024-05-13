@@ -32,6 +32,13 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    gridTemplateColumns: {
+      "shiftingForm" : "repeat(2, 600px)",
+    },
+    gridTemplateRows: {
+      "shiftingForm": "600px",
+    }
+    
   },
   plugins: [require("tailwindcss-animate")],
 }
