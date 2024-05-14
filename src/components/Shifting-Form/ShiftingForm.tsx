@@ -2,41 +2,51 @@ import {useFormModeStore} from "@/store/formModeStore.ts";
 import {cn} from "@/lib/utils.ts";
 import {AnimatePresence, motion} from "framer-motion";
 
+// const hiddenBlockVariants = {
+//     initial: {
+//         y: -100,
+//         opacity: 0,
+//     },
+//     animate: {
+//
+//         y: 0,
+//         opacity: 1,
+//         transition: {
+//             duration: 0.5
+//         }
+//     },
+//     exit: {
+//         opacity: [0.5, 0, 0],
+//         y: [0, -100, -200],
+//         transition: {
+//             duration: 0.5
+//         }
+//     }
+// };
+
 const hiddenBlockVariants = {
     initial: {
         y: -100,
-        opacity: 0,
+        display: "none"
     },
     animate: {
-
         y: 0,
-        opacity: 1,
+        display: "block",
         transition: {
             duration: 0.5
         }
     },
     exit: {
+        display: "none",
+        y: -100,
         opacity: 0,
-        y: -2000,
         transition: {
-            type: "spring"
+            type: "spring",
+            stiffness: 100,
+
         }
     }
 };
-
-const visibleBlockVariants = {
-    initial: {
-        y: 0,
-    },
-    animate: {
-        y: 1,
-        transition: {
-            type: "spring",
-            duration: 0.5
-        }
-    }
-
-}
 
 export default function ShiftingForm() {
     const {isIndividual, toggle} = useFormModeStore();
@@ -51,7 +61,7 @@ export default function ShiftingForm() {
                            placeholder={"Your name..."}
                     />
                 </div>
-                <div className={"w-full *:w-full *:block"}>
+                <motion.div className={"w-full *:w-full *:block"}>
                     <label className={"mb-4 text-2xl text-white font-bold"}>and I represent</label>
                     <div>
                         <button
@@ -69,25 +79,37 @@ export default function ShiftingForm() {
                             A Company
                         </button>
                     </div>
-                </div>
-                <AnimatePresence mode={"popLayout"}>
-                    {!isIndividual && (
-                        <motion.div className={"w-full *:w-full *:block"}
-                                    variants={hiddenBlockVariants}
-                                    initial={"initial"} animate={"animate"} exit={"initial"}
-                        >
-                            <label htmlFor={"companyName"} className={"mb-4 text-2xl text-white font-bold"}>By the name
-                                                                                                            of...</label>
-                            <input type={"text"} id={"companyName"}
-                                   className={"py-2 px-4 bg-blue-600 border-none placeholder:text-cyan-400 rounded-md"}
-                                   placeholder={"Your company name..."}
-                            />
-                        </motion.div>)
-                    }
-                </AnimatePresence>
-                <motion.div className={"w-full *:w-full *:block"} variants={visibleBlockVariants}
-                        initial={"initial"} animate={!isIndividual ? "animate" : "initial"}
-                >
+                    <AnimatePresence mode={"popLayout"}>
+                        {!isIndividual && (
+                            <motion.div className={"w-full *:w-full *:block"}
+                                        variants={hiddenBlockVariants}
+                                        initial={"initial"} animate={"animate"} exit={"exit"}
+                            >
+                                <label htmlFor={"companyName"} className={"mb-4 text-2xl text-white font-bold"}>By the
+                                                                                                                name
+                                                                                                                of...</label>
+                                <input type={"text"} id={"companyName"}
+                                       className={"py-2 px-4 bg-blue-600 border-none placeholder:text-cyan-400 rounded-md"}
+                                       placeholder={"Your company name..."}
+                                />
+                            </motion.div>)
+                        }
+                    </AnimatePresence>
+                    {/*<motion.div className={"w-full *:w-full *:block"}*/}
+                    {/*            variants={hiddenBlockVariants}*/}
+                    {/*            initial={"initial"} animate={!isIndividual ? "animate" : "exit"}*/}
+                    {/*>*/}
+                    {/*    <label htmlFor={"companyName"} className={"mb-4 text-2xl text-white font-bold"}>By the*/}
+                    {/*                                                                                    name*/}
+                    {/*                                                                                    of...</label>*/}
+                    {/*    <input type={"text"} id={"companyName"}*/}
+                    {/*           className={"py-2 px-4 bg-blue-600 border-none placeholder:text-cyan-400 rounded-md"}*/}
+                    {/*           placeholder={"Your company name..."}*/}
+                    {/*    />*/}
+                    {/*</motion.div>*/}
+                </motion.div>
+
+                <motion.div className={"w-full *:w-full *:block"}>
                     <label
                         htmlFor={"description"}
                         className={"mb-4 text-2xl text-white font-bold"}
@@ -99,9 +121,7 @@ export default function ShiftingForm() {
                               placeholder={"Your desire...."}
                     />
                 </motion.div>
-                <motion.button type={"submit"} className={"w-full py-2 bg-blue-600 rounded-md"} variants={visibleBlockVariants}
-                        initial={"initial"} animate={!isIndividual ? "animate" : "initial"}
-                >
+                <motion.button type={"submit"} className={"w-full py-2 bg-blue-600 rounded-md text-white font-bold"}>
                     Submit
                 </motion.button>
             </form>
