@@ -63,7 +63,7 @@ export default function ShiftingForm() {
                 </div>
                 <motion.div className={"w-full *:w-full *:block"}>
                     <label className={"mb-4 text-2xl text-white font-bold"}>and I represent</label>
-                    <div>
+                    <div className={cn(!isIndividual ? "mb-10" : "mb-0")}>
                         <button
                             className={cn("px-4 py-2  border border-white rounded-l-md font-bold text-white", isIndividual ? "bg-white text-cyan-900" : "bg-transparent")}
                             onClick={() => toggle()}
