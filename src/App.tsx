@@ -1,13 +1,12 @@
-import AnimatedFAQ from "./components/Animated-FAQ/AnimatedFAQ.tsx";
-import ShiftingFromSection from "@/components/Shifting-Form/ShiftingFromSection.tsx";
-import TestSlide from "@/components/TestSlide.tsx";
+import TestimonialSection from "@/components/Testimonial/TestimonialSection.tsx";
 
 function App() {
 
 
     return (
-        <ShiftingFromSection/>
-        // <TestSlide/>
+        <>
+            <TestimonialSection/>
+        </>
     );
 }
 
