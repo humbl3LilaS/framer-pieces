@@ -1,4 +1,22 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+    .testimonialCard:not(:first-child) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .testimonialCard:nth-child(even) {
+        background: black;
+        color: white;
+    }
+
+    .testimonialCard:nth-child(odd ) {
+        background: white;
+        color: black;
+    }
+}
   

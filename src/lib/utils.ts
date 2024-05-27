@@ -8,17 +8,17 @@ export function cn(...inputs: ClassValue[]) {
 export function idResolver(id: number) {
     switch (id) {
         case 0:
-            return "#zero";
+            return "zero";
         case 1:
-            return "#one";
+            return "one";
         case 2:
-            return  "#two";
+            return  "two";
         case 3:
-            return "#three";
+            return "three";
         case   4:
-            return "#four";
+            return "four";
         case 5:
-            return "#five";
+            return "five";
         default: throw new Error("Invalid casing")
     }
 }
