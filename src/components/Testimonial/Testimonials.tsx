@@ -19,7 +19,7 @@ export default function Testimonials() {
                     setTimeout(() => {
                         for (let i = 1; i <= 5; i++) {
                             animate(`#card${idResolver(i)}`, {
-                                x: `calc(100% +(${i - 1} * 0.9rem))`,
+                                x: `calc(100% + ${i - 1} * 0.9rem)`,
                                 scaleY: 1.1
                             });
                         }
