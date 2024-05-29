@@ -1,11 +1,11 @@
-import TestimonialSection from "@/components/Testimonial/TestimonialSection.tsx";
+import GridHoverHero from "@/components/GridHoverHero.tsx";
 
 function App() {
 
 
     return (
         <>
-            <TestimonialSection/>
+            <GridHoverHero/>
         </>
     );
 }
