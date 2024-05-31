@@ -11,17 +11,14 @@ export default function GridHoverHero() {
             </div>
             <div className={"h-full w-full flex flex-col justify-center items-center  "}
             >
-                <h1 className={"mb-10 text-white text-8xl font-black italic"}>Follow Your Passion</h1>
-                <p className={"max-w-[60%] mb-8 text-center text-emerald-50 text-2xl "}>
+                <h1 className={"relative mb-10 text-white text-8xl font-black italic z-20 line-clamp-[0]"}>Follow Your Passion</h1>
+                <p className={"relative max-w-[60%] mb-8 text-center text-emerald-50 text-2xl z-20"}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corporis deserunt dolores
                    placeat, porro quas quibusdam quos saepe? Est expedita ipsa non omnis praesentium quae quasi quis quo
                    recusandae saepe!
                 </p>
                 <button type={"button"} className={"relative py-3 px-10 bg-emerald-700 text-3xl font-black text-white cursor-pointer z-10"}
-                        onMouseEnter={e => {
-                            e.stopPropagation();
-                            console.log("hover")
-                        }}
+
                 >
 
                     Sign up
@@ -54,6 +51,7 @@ const squareGenerator = () => {
                         initial={"initial"} whileHover={"hover"}
                         transition={{duration: 1}}
                         role={"presentation"}
+
             />
         );
     }
