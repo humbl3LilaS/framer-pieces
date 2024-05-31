@@ -1,11 +1,11 @@
-import GridHoverHero from "@/components/GridHoverHero.tsx";
+import ImageGridHero from "@/components/Image-Grid-Hero/ImageGridHero.tsx";
 
 function App() {
 
 
     return (
         <>
-            <GridHoverHero/>
+            <ImageGridHero/>
         </>
     );
 }
