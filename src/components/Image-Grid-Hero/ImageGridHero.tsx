@@ -2,7 +2,6 @@ import StickyNav from "@/components/Image-Grid-Hero/StickyNav.tsx";
 import {useRef} from "react";
 import {useScroll} from "framer-motion";
 import PhotoGrid from "@/components/Image-Grid-Hero/PhotoGrid.tsx";
-import HeroContent from "@/components/Image-Grid-Hero/HeroContent.tsx";
 
 
 export default function ImageGridHero() {
