@@ -2,6 +2,8 @@ import StickyNav from "@/components/Image-Grid-Hero/StickyNav.tsx";
 import {useRef} from "react";
 import {useScroll} from "framer-motion";
 import PhotoGrid from "@/components/Image-Grid-Hero/PhotoGrid.tsx";
+import HeroContent from "@/components/Image-Grid-Hero/HeroContent.tsx";
+
 
 export default function ImageGridHero() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -15,7 +17,7 @@ export default function ImageGridHero() {
         <>
             <StickyNav scrollProgress={scrollYProgress}/>
             <section className={"w-screen h-[350vh] scroll-smooth"} ref={scrollRef}>
-                <div className={"relative w-full h-full"}>
+                <div className={"relative w-full h-full "}>
                     <PhotoGrid scrollProgress={scrollYProgress}/>
                 </div>
             </section>
