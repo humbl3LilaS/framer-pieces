@@ -8,7 +8,7 @@ export default function PhotoGrid({scrollProgress}: { scrollProgress: MotionValu
             className={"w-screen h-screen p-4 sticky top-0  grid grid-cols-3 grid-rows-3 gap-6 overflow-hidden z-0"}
         >
             <HeroContent scrollProgress={scrollProgress}/>
-            <PhotoDiv photoSrc={"/src/assets/bg2.jpg"}
+            <PhotoDiv photoSrc={"/public/bg2.jpg"}
                       translateX={"-25%"} translateY={"-25%"}
                       scrollProgress={scrollProgress}
                       className={"col-span-2"}
@@ -16,30 +16,30 @@ export default function PhotoGrid({scrollProgress}: { scrollProgress: MotionValu
 
             <PhotoDiv translateX={"25%"}
                       translateY={"-25%"}
-                      photoSrc={"/src/assets/bg1.jpg"}
+                      photoSrc={"/public/bg1.jpg"}
                       scrollProgress={scrollProgress}
                       className={"row-span-2"}
             />
 
-            <PhotoDiv photoSrc={"/src/assets/bg3.jpg"}
+            <PhotoDiv photoSrc={"/public/bg3.jpg"}
                       translateX={"-25%"}
                       translateY={"25%"}
                       scrollProgress={scrollProgress}
                       className={"row-span-2"}
             />
 
-            <PhotoDiv photoSrc={"/src/assets/bg4.jpg"}
+            <PhotoDiv photoSrc={"/public/bg4.jpg"}
                       translateX={"25%"}
                       translateY={"-135%"}
                       scrollProgress={scrollProgress}
             />
 
-            <PhotoDiv photoSrc={"/src/assets/bg5.jpg"}
+            <PhotoDiv photoSrc={"/public/bg5.jpg"}
                       translateX={"-25%"}
                       translateY={"25%"}
                       scrollProgress={scrollProgress}/>
 
-            <PhotoDiv photoSrc={"/src/assets/bg6.jpg"}
+            <PhotoDiv photoSrc={"/public/bg6.jpg"}
                       translateX={"25%"}
                       translateY={"25%"}
                       scrollProgress={scrollProgress}
